@@ -1,0 +1,40 @@
+<div th:replace="shared/header" xmlns:th="http://www.w3.org/1999/xhtml"></div>
+
+<main class="conteudo">
+    <section class="conteudo-principal">
+        <img class="conteudo-principal-imagem-indice" src="Linkd08 1.svg" alt="Logo da BraisCompany">
+        <div class="conteudo-principal-escrito">
+            <table class="tabela-indice-remuneracao" width="100%" border="1">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Mês</th>
+                    <th>Índice de Remuneração</th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user : ${users}" xmlns:th="http://www.w3.org/1999/xhtml">
+                    <td th:text="${user.id}" ></td>
+                    <td th:text="${user.mes}"></td>
+                    <td th:text="${user.indice}"></td>
+                </tr>
+                </tbody>
+
+
+                <!-- Valor Total-->
+                <!--<tr>
+                    <td>Valor total</td>
+                </tr>
+                <tr th:text = "indiceremuneracao.indiceremuneracao" xmlns:th="http://www.w3.org/1999/xhtml">
+                    <td th:text = "${indiceremuneracao.valor}"></td>
+                </tr> -->
+            </table>
+        </div>
+    </section>
+
+
+</main>
+
+<div th:replace="shared/footer" xmlns:th="http://www.w3.org/1999/xhtml"></div>
